@@ -1,0 +1,72 @@
+
+
+object oriented analysis and design
+
+
+----------------
+OO concepts
+----------------
+	
+	=> Abstraction
+	=> Encapsulation
+	=> Inheritance
+	=> Polymorphism
+
+
+----------------------------------------
+OO principles a.k.a SOLID principles
+----------------------------------------
+
+S — Single responsibility principle
+O — Open for extension & closed for modification principle
+L — Liskov substitution principle  i.e on  any strategy, obj should behave in different
+I — Interface segregation principle
+D — Dependency Inversion principle
+
+
+----------------------------------------
+OO patterns
+----------------------------------------
+
+=> creational
+=> behavioral
+=> structural
+
+
+
+
+
+
+
+
+accounts-service:
+==================
+
+-------------------------------------------------------
+
+step-1: Model
+
+	- Account
+	- Txn
+	
+-------------------------------------------------------	
+
+step-2: Layer(s)
+
+
+	1. data/repository   ==> persisting logic
+	
+		- AccountRepository
+		
+    2. business/service	 ==> processing logic
+    
+    	- TransferService
+    	
+    3. web               ==> request/response logic
+    
+
+-------------------------------------------------------     		
+		
+	
+	
+	
