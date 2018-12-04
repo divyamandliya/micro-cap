@@ -9,8 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.example.model.Account;
 import com.example.repository.AccountRepository;
 
-@Service
-@Component("txrService")
+@Service("txrService")
+//@Component("txrService")
 public class NEFTTxrServiceImpl implements TransferService {
 
 	private AccountRepository accountRepository;
@@ -20,6 +20,7 @@ public class NEFTTxrServiceImpl implements TransferService {
 		this.accountRepository = accountRepository;
 	}
 
+	
 	@Transactional
 	@Override
 	public boolean transfer(double amount, String fromAccNum, String toAccNum) {
@@ -34,6 +35,9 @@ public class NEFTTxrServiceImpl implements TransferService {
 
 		// step-3 : update accounts
 		accountRepository.updateAccount(fromAccount);
+		
+		//if(1==1)throw new RuntimeException("oops");
+		
 		accountRepository.updateAccount(toAccount);
 
 		return true;
